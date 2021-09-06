@@ -52,7 +52,7 @@ while True:
         # 09:00 < 현재 < 08:59:50
         if start_time < now < end_time - datetime.timedelta(seconds=10):
             target_price = get_target_price("KRW-MLK", 0.5)
-            ma15 = get_ma15("KRW-BTC")
+            ma15 = get_ma15("KRW-MLK")
             current_price = get_current_price("KRW-MLK")
             if target_price < current_price and ma15 < current_price:
                 krw = get_balance("KRW")
