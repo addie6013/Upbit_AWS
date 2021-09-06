@@ -50,11 +50,11 @@ while True:
             if target_price < current_price:
                 krw = get_balance("KRW")
                 if krw > 5000:
-                    upbit.buy_market_order("KRW-v", krw*0.9995)
+                    upbit.buy_market_order("KRW-MLK", krw*0.9995)
         else:
-            mlk = get_balance("v")
+            mlk = get_balance("MLK")
             if mlk > 0.00008:
-                upbit.sell_market_order("KRW-v", mlk*0.9995)
+                upbit.sell_market_order("KRW-MLK", mlk*0.9995)
         time.sleep(1)
     except Exception as e:
         print(e)
